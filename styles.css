@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: red 1px solid;
+  /*border: red 1px solid;*/
 }
 
 body {
@@ -69,4 +69,8 @@ text-decoration: none;
 a:link {
 color: #607D8B;
 border-bottom: 1px solid #F2F4F4;
+}
+
+.delete-button {
+  float: right;
 }
