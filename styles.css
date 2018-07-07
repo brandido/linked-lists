@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  border: red 1px solid;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+}
+
+.container-1 {
+  width: 50%;
+  background-color: #455A64;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+img {
+  height: 1em;
+
+}
+
+.input {
+  display: block;
+  margin: auto;
+}
+
+.enter-button {
+  color: #FFF;
+  background-color: #FFC107;
+  border: none;
+  margin: auto;
+  display: block;
+}
+
+.enter-button:hover {
+  background-color: #FFD773;
+}
+
+.container-2 {
+  width: 50%;
+  background-color: #CFD8DC;
+}
+
+.bookmark {
+  background-color: #FFF;
+  margin: 1em;
+  border: 2px solid #607D8B;
+}
+
+h2 {
+  color: #455A64;
+}
+
+h3 {
+  color: #607D8B;
+  /*Still need to have underline color changed*/
+}
+
+a {
+text-decoration: none;
+}
+
+a:link {
+color: #607D8B;
+border-bottom: 1px solid #F2F4F4;
+}
