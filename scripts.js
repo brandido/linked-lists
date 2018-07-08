@@ -4,17 +4,28 @@ var websiteUrlInput = document.querySelector('website-url')
 var enterButton = document.querySelector('.enter-button');
 var readButton = document.querySelector('.read-button');
 var deleteButton = document.querySelector('delete-button');
-var container2 = document.querySelector('.container-2');
+var bookmarksUl = document.querySelector('.bookmarks');
+
 
 // Event Listeners
 enterButton.addEventListener('click', createBookmark);
 
+var bookmarksArray = []
+
+function addBookmarkData() {
+  bookmarksArray.push({
+    websiteTitleInput: websiteTitleInput.value,
+    websiteUrlInput: websiteUrlInput.value,
+  });
+};
+
 // Functions
 function createBookmark(e) {
   e.preventDefault();
+  var newLi = document.createElement('li');
   // insert template literal
   // into DOM container 2
-  var templateLiteral = `<section class="bookmark">
+  newLi.innerHtml = `<section class="bookmark">
           <h2 class="website-title">${websiteTitleInput.value}</h2>
           <a href="${websiteUrlInput.value}" target="_blank"><h3>${websiteUrlInput.value}</h3></a>
           <div>
@@ -22,10 +33,9 @@ function createBookmark(e) {
             <button class="delete-button">Delete</button>
           </div>
       </section>`;
-  console.log(templateLiteral);
-  container2.innerHtml = templateLiteral;
-      return templateLiteral;
-}
+  console.log(newLi);
+  
+  }
 
 
 
