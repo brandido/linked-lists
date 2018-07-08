@@ -47,10 +47,31 @@ img {
   background-color: #CFD8DC;
 }
 
-.bookmarks {
-  background-color: #FFF;
+ul {
+  padding: 0;
   margin: 1em;
+}
+
+li {
+  background-color: #FFF;
+  margin: none;
   border: 2px solid #607D8B;
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+.read-li {
+  /*background-color: #F2F4F4;*/
+  background-color: blue;
+  margin: none;
+  border: 2px solid #607D8B;
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+.button-already-read {
+  color: #F05A28;
+  font-weight: bold;
 }
 
 h2 {
