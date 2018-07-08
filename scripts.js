@@ -25,7 +25,7 @@ function createBookmark(e) {
   e.preventDefault();
   addBookmarkData();
   var newLi = document.createElement('li');
-  newLi.innerHtml = 
+  newLi.innerHTML = 
     `<li>
       <section class="bookmark">
           <h2 class="website-title">${websiteTitleInput.value}</h2>
@@ -37,7 +37,7 @@ function createBookmark(e) {
       </section>
     </li>`;
   console.log(bookmarksArray);
-  bookmarksUl.prepend(newLi);
+  bookmarksUl.appendChild(newLi);
   
   }
 
