@@ -1,16 +1,17 @@
 // Variables
-var websiteTitleInput = document.querySelector('website-title');
-var websiteUrlInput = document.querySelector('website-url')
+var websiteTitleInput = document.querySelector('.website-title');
+var websiteUrlInput = document.querySelector('.website-url')
 var enterButton = document.querySelector('.enter-button');
 var readButton = document.querySelector('.read-button');
-var deleteButton = document.querySelector('delete-button');
-var bookmarksUl = document.querySelector('.bookmarks');
+var deleteButton = document.querySelector('.delete-button');
+var bookmarksUl = document.querySelector('ul');
 
 
 // Event Listeners
+// bookmarksUl.addEventListener('submit', addBookmarkData);
 enterButton.addEventListener('click', createBookmark);
 
-var bookmarksArray = []
+var bookmarksArray = [];
 
 function addBookmarkData() {
   bookmarksArray.push({
@@ -22,18 +23,21 @@ function addBookmarkData() {
 // Functions
 function createBookmark(e) {
   e.preventDefault();
+  addBookmarkData();
   var newLi = document.createElement('li');
-  // insert template literal
-  // into DOM container 2
-  newLi.innerHtml = `<section class="bookmark">
+  newLi.innerHtml = 
+    `<li>
+      <section class="bookmark">
           <h2 class="website-title">${websiteTitleInput.value}</h2>
           <a href="${websiteUrlInput.value}" target="_blank"><h3>${websiteUrlInput.value}</h3></a>
           <div>
             <button class="read-button">Read</button>
             <button class="delete-button">Delete</button>
           </div>
-      </section>`;
-  console.log(newLi);
+      </section>
+    </li>`;
+  console.log(bookmarksArray);
+  bookmarksUl.prepend(newLi);
   
   }
 
