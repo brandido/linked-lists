@@ -14,7 +14,6 @@ bookmarksUl.addEventListener('click', function (event) {
   var li = event.target.parentNode;
 
   if (buttonClicked.className === 'read-button') {
-    console.log('works');
     buttonClicked.classList.add('button-already-read')
     li.classList.add('read-li');
   }
