@@ -8,7 +8,16 @@ var bookmarksUl = document.querySelector('ul');
 
 
 // Event Listeners
-// bookmarksUl.addEventListener('submit', addBookmarkData);
+bookmarksUl.addEventListener('click', function (event) {
+  
+  var buttonClicked = event.target;
+  var li = event.target.parentNode;
+
+  if (buttonClicked.className === 'read-button') {
+    buttonClicked.classList.add('button-already-read')
+    li.classList.add('read-li');
+  }
+});
 enterButton.addEventListener('click', createBookmark);
 
 var bookmarksArray = [];
@@ -20,26 +29,29 @@ function addBookmarkData() {
   });
 };
 
-// Functions
 function createBookmark(e) {
   e.preventDefault();
   addBookmarkData();
   var newLi = document.createElement('li');
+  // var readButtonDom = button.read-button;
   newLi.innerHTML = 
-    `<li>
-      <section class="bookmark">
+    `<section class="bookmark">
           <h2 class="website-title">${websiteTitleInput.value}</h2>
           <a href="${websiteUrlInput.value}" target="_blank"><h3>${websiteUrlInput.value}</h3></a>
-          <div>
+          
             <button class="read-button">Read</button>
             <button class="delete-button">Delete</button>
-          </div>
-      </section>
-    </li>`;
+          
+      </section>`;
   console.log(bookmarksArray);
   bookmarksUl.appendChild(newLi);
-  
-  }
+// function markLiAsRead() {
+  // event.target.classList.add('.button-already-read')
+// }
+};
+
+
+
 
 
 
@@ -51,10 +63,12 @@ function createBookmark(e) {
 
 // A class of .read should be added to the bookmark
 // ^ dom event that changes the styles bottom of lesson 3
+// classList.add
 
 
 // If it already has the class of .read, it should be removed
 // ^ conditional to remove from dom as well as array (pop or slice method?)
+// classList.remove
 
 // When the user clicks on the “Remove” button, the link should be removed from the page
 
@@ -71,5 +85,5 @@ function createBookmark(e) {
 
 // use objects for different properties of bookmarks
 
-// 
+// Will need to use event.target and event.target.parentNode
 
