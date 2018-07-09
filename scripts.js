@@ -1,26 +1,31 @@
-// Variables
+
 var websiteTitleInput = document.querySelector('.website-title');
 var websiteUrlInput = document.querySelector('.website-url')
 var enterButton = document.querySelector('.enter-button');
 var readButton = document.querySelector('.read-button');
 var deleteButton = document.querySelector('.delete-button');
 var bookmarksUl = document.querySelector('ul');
-
+var bookmarksArray = [];
 
 // Event Listeners
-bookmarksUl.addEventListener('click', function (event) {
-  
-  var buttonClicked = event.target;
-  var li = event.target.parentNode;
-
-  if (buttonClicked.className === 'read-button') {
-    buttonClicked.classList.add('button-already-read')
-    li.classList.add('read-li');
-  }
-});
+bookmarksUl.addEventListener('click', styleReadButton); 
 enterButton.addEventListener('click', createBookmark);
 
-var bookmarksArray = [];
+// Functions
+function styleReadButton() {
+  var buttonClicked = event.target;
+  var li = event.target.parentNode.parentNode;
+  if (buttonClicked.className === 'read-button') {
+    buttonClicked.classList.toggle('button-already-read');
+    li.classList.toggle('read-li');
+  }
+  
+  // if (buttonClicked.className === 'read-button') {
+  //   buttonClicked.classList.remove('button-already-read');
+  //   li.classList.remove('read-li');
+
+  // }
+};
 
 function addBookmarkData() {
   bookmarksArray.push({
@@ -33,21 +38,14 @@ function createBookmark(e) {
   e.preventDefault();
   addBookmarkData();
   var newLi = document.createElement('li');
-  // var readButtonDom = button.read-button;
   newLi.innerHTML = 
     `<section class="bookmark">
           <h2 class="website-title">${websiteTitleInput.value}</h2>
           <a href="${websiteUrlInput.value}" target="_blank"><h3>${websiteUrlInput.value}</h3></a>
-          
             <button class="read-button">Read</button>
-            <button class="delete-button">Delete</button>
-          
+            <button class="delete-button">Delete</button>         
       </section>`;
-  console.log(bookmarksArray);
   bookmarksUl.appendChild(newLi);
-// function markLiAsRead() {
-  // event.target.classList.add('.button-already-read')
-// }
 };
 
 
