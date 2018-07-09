@@ -5,17 +5,20 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  display: flex;
+  margin: auto;
 }
 
 .container-1 {
   width: 50%;
   background-color: #455A64;
+  height: 100vh;
+  float: left;
+  position: fixed;
 }
 
 h1 {
   color: #FFF;
-  font-size: 1em;
+  font-size: 3em;
   padding: 2em;
   text-align: center;
 }
@@ -45,6 +48,13 @@ img {
 .container-2 {
   width: 50%;
   background-color: #CFD8DC;
+  float: right;
+}
+
+.container-2::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 ul {
@@ -58,15 +68,14 @@ li {
   border: 2px solid #607D8B;
   list-style-type: none;
   margin-bottom: 1em;
+  padding: 10px;
 }
 
 .read-li {
   background-color: #F2F4F4;
   /*background-color: blue;*/
   margin: none;
-  border: 2px solid #607D8B;
   list-style-type: none;
-  margin-bottom: 1em;
 }
 
 .button-already-read {
@@ -80,6 +89,10 @@ h2 {
 
 h3 {
   color: #607D8B;
+  border-top: 1px solid #607D8B;
+  border-bottom: 1px solid #607D8B;
+  padding-top: 10px;
+  padding-bottom: 10px;
   /*Still need to have underline color changed*/
 }
 
