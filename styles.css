@@ -18,9 +18,9 @@ body {
 
 h1 {
   color: #FFF;
-  font-size: 3em;
-  padding: 2em;
+  font-size: 5em;
   text-align: center;
+  margin-top: 2em;
 }
 
 img {
@@ -31,6 +31,10 @@ img {
 .input {
   display: block;
   margin: auto;
+  width: 17.3em;
+  margin-bottom: 2em;
+  font-size: 2.3em;
+  padding: .2em;
 }
 
 .enter-button {
@@ -39,6 +43,8 @@ img {
   border: none;
   margin: auto;
   display: block;
+  width: 17.3em;
+  font-size: 2.3em;
 }
 
 .enter-button:hover {
@@ -73,7 +79,6 @@ li {
 
 .read-li {
   background-color: #F2F4F4;
-  /*background-color: blue;*/
   margin: none;
   list-style-type: none;
 }
