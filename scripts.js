@@ -10,7 +10,7 @@ var bookmarksArray = [];
 // Event Listeners
 enterButton.addEventListener('click', createBookmark);
 bookmarksUl.addEventListener('click', styleReadButton); 
-// bookmarksUl.addEventListener('click', deleteBookmark); 
+bookmarksUl.addEventListener('click', deleteButton); 
 
 // Functions
 function styleReadButton() {
@@ -19,25 +19,22 @@ function styleReadButton() {
   if (buttonClicked.className === 'read-button') {
     buttonClicked.classList.add('button-already-read');
     li.classList.add('read-li');
-  }
+  } else {
+    buttonClicked.classList.remove('button-already-read');
+    li.classList.remove('read-li');
+  };
   if (buttonClicked.className === 'delete-button') {
       li.remove();
   }
 };
-//   if (buttonClicked.className === 'read-button') {
-//     buttonClicked.classList.remove('button-already-read');
-//     li.classList.remove('read-li');
-//   }
-// };
 
-// function deleteBookmark() {
+// function deleteButton() {
 //   var buttonClicked = event.target;
-//   console.log('works');
-//   // var li = event.target.parentNode.parentNode;
-//   // if (buttonClicked.className === 'delete-button') {
-//   //   li.remove();
+//   console.log(buttonClicked)
+//   if (buttonClicked.className === 'delete-button') {
+//       li.remove();
 //   }
-
+// }
 
 function addBookmarkData() {
   bookmarksArray.push({
