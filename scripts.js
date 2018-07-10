@@ -8,24 +8,36 @@ var bookmarksUl = document.querySelector('ul');
 var bookmarksArray = [];
 
 // Event Listeners
-bookmarksUl.addEventListener('click', styleReadButton); 
 enterButton.addEventListener('click', createBookmark);
+bookmarksUl.addEventListener('click', styleReadButton); 
+// bookmarksUl.addEventListener('click', deleteBookmark); 
 
 // Functions
 function styleReadButton() {
   var buttonClicked = event.target;
   var li = event.target.parentNode.parentNode;
   if (buttonClicked.className === 'read-button') {
-    buttonClicked.classList.toggle('button-already-read');
-    li.classList.toggle('read-li');
+    buttonClicked.classList.add('button-already-read');
+    li.classList.add('read-li');
   }
-  
-  // if (buttonClicked.className === 'read-button') {
-  //   buttonClicked.classList.remove('button-already-read');
-  //   li.classList.remove('read-li');
-
-  // }
+  if (buttonClicked.className === 'delete-button') {
+      li.remove();
+  }
 };
+//   if (buttonClicked.className === 'read-button') {
+//     buttonClicked.classList.remove('button-already-read');
+//     li.classList.remove('read-li');
+//   }
+// };
+
+// function deleteBookmark() {
+//   var buttonClicked = event.target;
+//   console.log('works');
+//   // var li = event.target.parentNode.parentNode;
+//   // if (buttonClicked.className === 'delete-button') {
+//   //   li.remove();
+//   }
+
 
 function addBookmarkData() {
   bookmarksArray.push({
