@@ -11,56 +11,59 @@ body {
 .container-1 {
   width: 50%;
   background-color: #455A64;
-  height: 100vh;
   float: left;
   position: fixed;
+  height: 100vh;
+  overflow: scroll;
 }
+
+.form {
+  width: 80%;
+  margin: 20% auto;
+  }
 
 h1 {
   color: #FFF;
   font-size: 5em;
   text-align: center;
-  margin-top: 2em;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
 }
 
 img {
   height: 1em;
-
 }
 
 .input {
   display: block;
-  margin: auto;
-  width: 17.3em;
-  margin-bottom: 2em;
+  margin-top: 10%;
   font-size: 2.3em;
   padding: .2em;
+  width: 100%;
 }
 
 .enter-button {
   color: #FFF;
   background-color: #FFC107;
   border: none;
-  margin: auto;
   display: block;
-  width: 17.3em;
   font-size: 2.3em;
+  width: 100%;
+  margin-top: 10%;
 }
 
 .enter-button:hover {
   background-color: #FFD773;
+  margin-bottom: 3em;
 }
 
 .container-2 {
   width: 50%;
   background-color: #CFD8DC;
   float: right;
-}
-
-.container-2::after {
-  content: "";
-  clear: both;
-  display: block;
+  height: 100vh;
+  overflow: scroll;
 }
 
 ul {
@@ -83,8 +86,41 @@ li {
   list-style-type: none;
 }
 
+.read-button {
+  border: none;
+  color: #455A64;
+  font-size: 1em;
+}
+
 .button-already-read {
   color: #F05A28;
+  font-weight: bold;
+  border: none;
+  background-color: #F2F4F4;
+}
+
+button:focus {
+  outline: none;
+}
+
+.delete-button {
+  color: #455A64;
+  float: right;
+  border: none;
+  font-size: 1em;
+}
+
+.read-button:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #FFC107;
+  color: #455A64;
+  font-weight: bold;
+}
+
+.delete-button:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #FFC107;
+  color: #455A64;
   font-weight: bold;
 }
 
@@ -102,14 +138,27 @@ h3 {
 }
 
 a {
-text-decoration: none;
+  color: #607D8B;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  font-weight: normal;
 }
 
 a:link {
-color: #607D8B;
-border-bottom: 1px solid #F2F4F4;
+  color: #607D8B;
+  border-bottom: 1px solid #CFD8DC;
+  font-weight: normal;
 }
 
-.delete-button {
-  float: right;
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
+  color: #455A64;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    border: yellow;
+  }
 }
