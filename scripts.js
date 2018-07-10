@@ -16,14 +16,15 @@ bookmarksUl.addEventListener('click', styleReadButton);
 function styleReadButton() {
   var buttonClicked = event.target;
   var li = event.target.parentNode.parentNode;
-  if (buttonClicked.className === 'read-button') {
-    buttonClicked.classList.add('button-already-read');
-    li.classList.add('read-li');
-  }
+
+  buttonClicked.classList.toggle('button-already-read');
+  li.classList.toggle('read-li');
+  
+
   if (buttonClicked.className === 'delete-button') {
       li.remove();
-  }
-};
+  }};
+
 //   if (buttonClicked.className === 'read-button') {
 //     buttonClicked.classList.remove('button-already-read');
 //     li.classList.remove('read-li');
