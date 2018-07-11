@@ -162,3 +162,22 @@ a:hover {
     border: yellow;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .container-1 {
+    float: none;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: none;
+  }
+
+  .container-2 {
+    float: none;
+    width: 100%;
+    display: block;
+    overflow: none;
+  }
+}
+
+
