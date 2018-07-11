@@ -16,6 +16,7 @@ bookmarksUl.addEventListener('click', deleteButton);
 function styleReadButton() {
   var buttonClicked = event.target;
   var li = event.target.parentNode.parentNode;
+
   if (buttonClicked.className === 'read-button') {
     buttonClicked.classList.add('button-already-read');
     li.classList.add('read-li');
@@ -27,6 +28,7 @@ function styleReadButton() {
       li.remove();
   }
 };
+
 
 // function deleteButton() {
 //   var buttonClicked = event.target;
