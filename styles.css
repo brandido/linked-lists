@@ -93,6 +93,13 @@ li {
   font-size: 1em;
 }
 
+.read-button:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #FFC107;
+  color: #455A64;
+  font-weight: bold;
+}
+
 .button-already-read {
   color: #F05A28;
   font-weight: bold;
@@ -109,13 +116,6 @@ button:focus {
   float: right;
   border: none;
   font-size: 1em;
-}
-
-.read-button:hover {
-  text-decoration-line: underline;
-  text-decoration-color: #FFC107;
-  color: #455A64;
-  font-weight: bold;
 }
 
 .delete-button:hover {
@@ -138,17 +138,12 @@ h3 {
   /*Still need to have underline color changed*/
 }
 
-a {
-  color: #607D8B;
-  text-decoration: underline;
-  text-decoration-color: #F2F4F4;
-  font-weight: normal;
-}
-
 a:link {
   color: #607D8B;
   border-bottom: 1px solid #CFD8DC;
-  font-weight: normal;
+  color: #607D8B;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
 }
 
 a:hover {
@@ -172,5 +167,3 @@ a:hover {
     display: block;
   }
 }
-
-
