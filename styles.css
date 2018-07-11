@@ -28,11 +28,11 @@ h1 {
   text-align: center;
   margin: auto;
   width: 100%;
-  font-weight: bold;
 }
 
 img {
-  height: 1em;
+  height: .75em;
+  margin: 0 .2em;
 }
 
 .input {
@@ -48,7 +48,8 @@ img {
   background-color: #FFC107;
   border: none;
   display: block;
-  font-size: 2.3em;
+  font-size: 1.5em;
+  padding: .3em;
   width: 100%;
   margin-top: 10%;
 }
@@ -92,6 +93,13 @@ li {
   font-size: 1em;
 }
 
+.read-button:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #FFC107;
+  color: #455A64;
+  font-weight: bold;
+}
+
 .button-already-read {
   color: #F05A28;
   font-weight: bold;
@@ -108,13 +116,6 @@ button:focus {
   float: right;
   border: none;
   font-size: 1em;
-}
-
-.read-button:hover {
-  text-decoration-line: underline;
-  text-decoration-color: #FFC107;
-  color: #455A64;
-  font-weight: bold;
 }
 
 .delete-button:hover {
@@ -137,17 +138,12 @@ h3 {
   /*Still need to have underline color changed*/
 }
 
-a {
-  color: #607D8B;
-  text-decoration: underline;
-  text-decoration-color: #F2F4F4;
-  font-weight: normal;
-}
-
 a:link {
   color: #607D8B;
   border-bottom: 1px solid #CFD8DC;
-  font-weight: normal;
+  color: #607D8B;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
 }
 
 a:hover {
@@ -157,27 +153,17 @@ a:hover {
   font-weight: bold;
 }
 
-@media screen and (min-width: 900px) {
-  body {
-    border: yellow;
-  }
-}
-
 @media screen and (max-width: 750px) {
   .container-1 {
     float: none;
     width: 100%;
     display: block;
     position: relative;
-    overflow: none;
   }
 
   .container-2 {
     float: none;
     width: 100%;
     display: block;
-    overflow: none;
   }
 }
-
-
