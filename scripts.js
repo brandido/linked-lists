@@ -13,21 +13,6 @@ bookmarksUl.addEventListener('click', styleReadButton);
 bookmarksUl.addEventListener('click', deleteButton); 
 
 // Functions
-function styleReadButton() {
-  var buttonClicked = event.target;
-  var li = event.target.parentNode.parentNode;
-
-  if (buttonClicked.className === 'read-button') {
-    buttonClicked.classList.add('button-already-read');
-    li.classList.add('read-li');
-  } else {
-    buttonClicked.classList.remove('button-already-read');
-    li.classList.remove('read-li');
-  };
-  if (buttonClicked.className === 'delete-button') {
-      li.remove();
-  }
-};
 
 
 // function deleteButton() {
@@ -47,7 +32,10 @@ function addBookmarkData() {
 
 function createBookmark(e) {
   e.preventDefault();
-  addBookmarkData();
+  if (websiteTitleInput.value.length * websiteUrlInput.value.length === 0) {
+    alert('Yo! Please enter both a website title and webstire url.');
+  } else {
+    addBookmarkData();
   var newLi = document.createElement('li');
   newLi.innerHTML = 
     `<section class="bookmark">
@@ -57,7 +45,25 @@ function createBookmark(e) {
             <button class="delete-button">Delete</button>         
       </section>`;
   bookmarksUl.appendChild(newLi);
+    };
+  };
+
+function styleReadButton() {
+  var buttonClicked = event.target;
+  var li = event.target.parentNode.parentNode;
+  if (buttonClicked.className === 'read-button') {
+    buttonClicked.classList.add('button-already-read');
+    li.classList.add('read-li');
+  } else {
+    buttonClicked.classList.remove('button-already-read');
+    li.classList.remove('read-li');
+  };
+  if (buttonClicked.className === 'delete-button') {
+      li.remove();
+  }
 };
+
+
 
 
 
