@@ -6,6 +6,8 @@ var deleteButton = document.querySelector('.delete-button');
 var bookmarksUl = document.querySelector('ul');
 var bookmarksArray = [];
 
+websiteTitleInput.addEventListener('keyup', enableButton);
+websiteUrlInput.addEventListener('keyup', enableButton);
 enterButton.addEventListener('click', createBookmark);
 bookmarksUl.addEventListener('click', styleReadButton); 
 bookmarksUl.addEventListener('click', deleteButton); 
@@ -50,3 +52,8 @@ function styleReadButton() {
   }
 };
 
+function enableButton() {
+  if (websiteTitleInput.value.length * websiteUrlInput.value.length > 0) {
+    enterButton.removeAttribute('disabled');  
+  }
+}
