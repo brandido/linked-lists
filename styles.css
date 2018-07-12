@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /*border: red 1px solid;*/
 }
 
 body {
@@ -8,6 +7,7 @@ body {
   margin: auto;
 }
 
+/*Left Container*/
 .container-1 {
   width: 50%;
   background-color: #455A64;
@@ -59,6 +59,7 @@ img {
   margin-bottom: 3em;
 }
 
+/*Right Container*/
 .container-2 {
   width: 50%;
   background-color: #CFD8DC;
@@ -72,6 +73,7 @@ ul {
   margin: 1em;
 }
 
+/*DOM Events*/
 li {
   background-color: #FFF;
   margin: none;
@@ -135,7 +137,11 @@ h3 {
   border-bottom: 1px solid #607D8B;
   padding-top: 10px;
   padding-bottom: 10px;
-  /*Still need to have underline color changed*/
+}
+
+.link-counter {
+  padding: 1em;
+  color: #455a63;
 }
 
 a:link {
@@ -147,12 +153,13 @@ a:link {
 }
 
 a:hover {
+  color: #455A64;
   text-decoration: underline;
   text-decoration-color: #FFC107;
-  color: #455A64;
   font-weight: bold;
 }
 
+/*Media Queries*/
 @media screen and (max-width: 750px) {
   .container-1 {
     float: none;
