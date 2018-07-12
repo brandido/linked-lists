@@ -118,6 +118,7 @@ button:focus {
   float: right;
   border: none;
   font-size: 1em;
+  background-color: inherit;
 }
 
 .delete-button:hover {
